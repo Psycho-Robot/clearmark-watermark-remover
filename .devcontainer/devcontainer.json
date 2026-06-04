@@ -1,0 +1,20 @@
+{
+  "name": "ClearMark",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/itsmechlark/features/redis-server:1": {}
+  },
+  "forwardPorts": [8000, 6379],
+  "portsAttributes": {
+    "8000": {
+      "label": "ClearMark App",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt && cp .env.example .env",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    }
+  }
+}
