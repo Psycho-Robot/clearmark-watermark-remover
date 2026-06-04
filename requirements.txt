@@ -1,0 +1,40 @@
+# ClearMark — Dual-Engine Watermark Remover
+# Python 3.10+
+
+# ── Web framework ─────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+aiofiles==23.2.1
+jinja2==3.1.4
+
+# ── Task queue ────────────────────────────────────────────────────────────────
+celery[redis]==5.4.0
+redis==5.0.4
+billiard==4.2.0
+
+# ── PDF — Fast Track ──────────────────────────────────────────────────────────
+PyMuPDF==1.24.3
+
+# ── PDF — AI Track rasterisation ─────────────────────────────────────────────
+pdf2image==1.17.0
+Pillow==10.3.0
+
+# ── Image processing / AI Track ───────────────────────────────────────────────
+opencv-python-headless==4.9.0.80
+numpy==1.26.4
+
+# ── AI Inpainting (optional — set USE_AI_INPAINTING=true to enable) ──────────
+torch==2.3.0          ; sys_platform != "win32"
+torchvision==0.18.0   ; sys_platform != "win32"
+
+# ── Storage ───────────────────────────────────────────────────────────────────
+boto3==1.34.101        # S3 backend (only needed if STORAGE_BACKEND=s3)
+
+# ── Scheduling ────────────────────────────────────────────────────────────────
+APScheduler==3.10.4
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+pydantic==2.7.1
+pydantic-settings==2.2.1
