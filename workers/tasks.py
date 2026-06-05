@@ -194,6 +194,7 @@ def process_document(self, task_id: str, storage_key: str, original_filename: st
                 "task_id":       task_id,
                 "download_url":  download_url,
                 "output_key":    output_key,
+                "upload_key":    storage_key,
                 "filename":      out_name,
                 "elapsed_secs":  elapsed,
                 "triage":        meta,
